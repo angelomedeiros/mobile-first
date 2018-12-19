@@ -1,22 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-menu>ul {
-  list-style: none;
-}
-
-:root {
-  font-family: "Montserrat", sans-serif;
-}
-
+@import url("./reset.css");
+@import url("./variables.css");
 img.responsive {
   width: 100%;
   height: auto;
@@ -41,33 +24,17 @@ img.responsive {
 
 .container {
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.row:before,
-.row:after {
-  content: "";
-  display: block;
-}
-
-.row:after {
-  clear: both;
+  display: flex;
+  margin-left: calc(-1 * var(--gutter));
+  margin-right: calc(-1 * var(--gutter));
 }
 
 .col {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-@media (min-width: 400px) {
-  .col {
-    width: 33%;
-    float: left;
-  }
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
