@@ -1,5 +1,46 @@
 @import url("./reset.css");
 @import url("./variables.css");
+body {
+  color: var(--cor1);
+}
+
+header {
+  background-color: var(--cor2);
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+}
+
+header a {
+  color: var(--cor3);
+}
+
+header .menu-icon {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  width: 35px;
+  height: 28px;
+  display: block;
+  background: var(--cor1);
+}
+
+header .menu-icon:before {
+  content: "";
+  display: block;
+  margin: 5px auto;
+  width: 80%;
+  height: 4px;
+  background: var(--cor3);
+  box-shadow: 0 7px 0 0 var(--cor3), 0 15px 0 0 var(--cor3);
+}
+
+@media (min-width: 992px) {
+  header .menu-icon {
+    display: none;
+  }
+}
+
 img.responsive {
   width: 100%;
   height: auto;
