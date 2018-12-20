@@ -35,12 +35,6 @@ header .menu-icon:before {
   box-shadow: 0 7px 0 0 var(--cor3), 0 15px 0 0 var(--cor3);
 }
 
-@media (min-width: 992px) {
-  header .menu-icon {
-    display: none;
-  }
-}
-
 menu {
   position: fixed;
   top: 0;
@@ -106,4 +100,21 @@ img.responsive {
 .col {
   padding-left: var(--gutter);
   padding-right: var(--gutter);
+}
+
+@media (min-width: 992px) {
+  header .menu-icon {
+    display: none;
+  }
+  menu {
+    position: relative;
+    transform: translateX(0);
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  menu ul {
+    display: flex;
+    justify-content: center;
+  }
 }
