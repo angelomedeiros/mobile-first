@@ -41,6 +41,34 @@ header .menu-icon:before {
   }
 }
 
+menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background: var(--cor1);
+  z-index: 1;
+  padding: 15px 0;
+  border: 7px solid var(--cor1);
+  transform: translateX(-300px);
+  transition: transform 0.3s linear;
+}
+
+menu.activeted {
+  transform: translateX(0);
+}
+
+menu li a {
+  color: var(--cor3);
+  padding: 15px;
+  display: block;
+}
+
+menu li a:hover {
+  background-color: var(--cor2);
+}
+
 img.responsive {
   width: 100%;
   height: auto;
